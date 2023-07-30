@@ -63,13 +63,12 @@ function extract_android_cmd {
 }
 
 function post_install {
-  cat >> '/home/vscode/.globalenv' << EOF
+  cat >> '/etc/environment' << EOF
 ANDROID_HOME="/opt/android/sdk"
 
 PATH="\${PATH}:/opt/flutter/bin"
 PATH="\${PATH}:/opt/android/sdk/cmdline-tools/latest/bin"
 EOF
-  chown 'vscode:vscode' '/home/vscode/.globalenv'
 }
 
 download_flutter
