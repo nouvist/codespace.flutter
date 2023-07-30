@@ -62,7 +62,7 @@ function extract_android_cmd {
   chown -R 'vscode:vscode' '/opt/android'
 }
 
-function post_install {
+function environment_setup {
   cat >> '/etc/environment' << EOF
 ANDROID_HOME="/opt/android/sdk"
 
@@ -71,10 +71,16 @@ PATH="\${PATH}:/opt/android/sdk/cmdline-tools/latest/bin"
 EOF
 }
 
+function clear_temp {
+  rm '/tmp/flutter.tar.xz' 
+  rm '/tmp/cmdline.zip' 
+}
+
 download_flutter
 extract_flutter
 
 download_android_cmd
 extract_android_cmd
 
-post_install
+environment_setup
+clear_temp

@@ -10,3 +10,5 @@ RUN /tmp/install.sh
 
 USER vscode
 RUN /tmp/postinstall.sh
+
+RUN sudo rm /tmp/*.sh
