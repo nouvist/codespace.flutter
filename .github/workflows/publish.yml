@@ -10,9 +10,9 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Docker image
         run: |
-          docker build . --tag ghcr.io/nouivst/codespace.flutter:latest
-          docker push ghcr.io/nouivst/codespace.flutter:latest
+          docker build . --tag 'ghcr.io/${{ github.repository }}:latest'
+          docker push 'ghcr.io/${{ github.repository }}:latest'
