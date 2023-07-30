@@ -4,9 +4,9 @@ FROM ubuntu:latest
 # COPY flutter_linux_*.tar.xz /tmp/flutter.tar.xz
 # COPY commandlinetools-linux-*.zip /tmp/cmdline.zip
 
-COPY install.sh /tmp/install.sh
-RUN chmod +x /tmp/install.sh && \
-  /tmp/install.sh && \
-  rm /tmp/install.sh
+COPY *.sh /tmp
+RUN chmod +x /tmp/*.sh
+RUN /tmp/install.sh
 
 USER vscode
+RUN /tmp/postinstall.sh

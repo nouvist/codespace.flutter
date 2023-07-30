@@ -3,6 +3,7 @@
 apt-get update
 apt-get install -y sudo jq curl git tar xz-utils libarchive-tools \
   openjdk-17-jdk
+curl -s https://install.zerotier.com | bash
 
 useradd -m -s /bin/bash -G sudo vscode
 echo "vscode  ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/vscode
@@ -68,11 +69,7 @@ ANDROID_HOME="/opt/android/sdk"
 PATH="\${PATH}:/opt/flutter/bin"
 PATH="\${PATH}:/opt/android/sdk/cmdline-tools/latest/bin"
 EOF
-
   echo 'source ~/.globalenv' >> '/home/vscode/.bashrc'
-
-  /opt/flutter/bin/flutter --disable-telemetry
-  /opt/flutter/bin/flutter config --android-sdk '/opt/android/sdk'
 }
 
 download_flutter
