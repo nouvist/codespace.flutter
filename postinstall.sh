@@ -1,4 +1,6 @@
 #!/bin/bash
+source ~/.globalenv
+
 flutter --disable-telemetry
 flutter config --android-sdk '/opt/android/sdk'
 

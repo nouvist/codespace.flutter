@@ -69,7 +69,7 @@ ANDROID_HOME="/opt/android/sdk"
 PATH="\${PATH}:/opt/flutter/bin"
 PATH="\${PATH}:/opt/android/sdk/cmdline-tools/latest/bin"
 EOF
-  echo 'source ~/.globalenv' >> '/home/vscode/.bashrc'
+  chown 'vscode:vscode' '/home/vscode/.globalenv'
 }
 
 download_flutter
