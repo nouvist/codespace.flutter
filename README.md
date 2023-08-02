@@ -1,7 +1,7 @@
 # codespace.flutter
 
-Flutter and Android SDK Docker image for Codespace. Created primarily for my
-personal use.
+A Docker image with Flutter and Android SDK for Codespace. I made it mainly for
+myself.
 
 ## What is included?
 
@@ -11,6 +11,10 @@ personal use.
 - ZeroTier
 
 ## Usage
+
+> Before you can use this Docker image, you need to agree to all the licenses
+> for the components inside it, including but not limited to Flutter and
+> Android SDK licenses.
 
 Add this to your `devcontainer.json`.
 
