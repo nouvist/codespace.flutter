@@ -36,7 +36,8 @@ function download_flutter {
 function extract_flutter {
   echo 'Extracting Flutter...'
   mkdir -p '/opt'
-  tar -xvf '/tmp/flutter.tar.xz' -C '/opt'
+  tar -xf '/tmp/flutter.tar.xz' -C '/opt'
+  echo 'Change ownership of Flutter folder...'
   chown -R 'vscode:vscode' '/opt/flutter'
 }
 
@@ -57,8 +58,9 @@ function download_android_cmd {
 function extract_android_cmd {
   echo 'Extracting Android Command Line Tools...'
   mkdir -p '/opt/android/sdk/cmdline-tools/latest'
-  bsdtar -xvf '/tmp/cmdline.zip' -s '|[^/]*/||' \
+  bsdtar -xf '/tmp/cmdline.zip' -s '|[^/]*/||' \
     -C '/opt/android/sdk/cmdline-tools/latest'
+  echo 'Change ownership of Android SDK folder...'
   chown -R 'vscode:vscode' '/opt/android'
 }
 
@@ -73,5 +75,4 @@ extract_flutter
 download_android_cmd
 extract_android_cmd
 
-environment_setup
 clear_temp

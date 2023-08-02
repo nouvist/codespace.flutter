@@ -49,3 +49,6 @@ Add this to your `devcontainer.json`.
 ### ZeroTier Usage
 
 See [ZeroTier documentation](https://docs.zerotier.com/getting-started/getting-started#setup-the-zerotier-app) for more.
+
+SystemD may not be enabled in some container. If that the case, use `service`
+tool instead of `systemctl`.
