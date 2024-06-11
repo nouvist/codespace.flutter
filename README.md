@@ -1,7 +1,20 @@
-# codespace.flutter
+# Codespace Flutter Docker Image
 
-A Docker image with Flutter and Android SDK for Codespace. I made it mainly for
-myself.
+> Before you can use this Docker image, you need to agree to all the licenses
+> for the components inside it, including but not limited to Flutter and
+> Android SDK licenses.
+
+A Docker image with Flutter and Android SDK for Codespace. Ths repo is for
+myself and only will use the latest stable version. If you want to use
+different Flutter version, feel free to fork and rebuild it for yourself.
+Don't forget to setup `PUBLISH_TOKEN` with Github token with packages write
+access.
+
+But you don't need to build it by yourself. You can also uses my build
+[here](https://github.com/nouvist/codespace.flutter/pkgs/container/codespace.flutter).
+
+This repository is configured with ZeroTier for mesh VPN connecting Codespace
+to your phone, so you can use ADB.
 
 ## What is included?
 
@@ -11,10 +24,6 @@ myself.
 - ZeroTier
 
 ## Usage
-
-> Before you can use this Docker image, you need to agree to all the licenses
-> for the components inside it, including but not limited to Flutter and
-> Android SDK licenses.
 
 Add this to your `devcontainer.json`.
 
