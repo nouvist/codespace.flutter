@@ -21,6 +21,6 @@ flutter config --android-sdk '/opt/android/sdk'
 yes | flutter doctor --android-licenses
 
 # disable telemetry
-echo 'Disabling telemetry...'
-flutter --disable-telemetry
+echo 'Disabling anaytics...'
+flutter --disable-analytics
 dart --disable-analytics
