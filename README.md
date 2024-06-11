@@ -1,5 +1,8 @@
 # Codespace Flutter Docker Image
 
+[![docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](
+https://github.com/nouvist/codespace.flutter/pkgs/container/codespace.flutter)
+
 > Before you can use this Docker image, you need to agree to all the licenses
 > for the components inside it, including but not limited to Flutter and
 > Android SDK licenses.
