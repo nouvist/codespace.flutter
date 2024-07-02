@@ -16,15 +16,15 @@ access.
 But you don't need to build it by yourself. You can also uses my build
 [here](https://github.com/nouvist/codespace.flutter/pkgs/container/codespace.flutter).
 
-This repository is configured with ZeroTier for mesh VPN connecting Codespace
-to your phone, so you can use ADB.
+This repository is configured with both ZeroTier and Tailscale as mesh VPN
+solution. Use `service` as `systemctl` substitute.
 
 ## What is included?
 
-- Flutter SDK `stable`
-- Android SDK `33` (will updated accordingly to the target SDK version of
-  Flutter)
-- ZeroTier
+- Flutter SDK `stable`.
+- Android SDK `33`, will updated accordingly to the target SDK version of
+  Flutter.
+- ZeroTier and Tailscale.
 
 ## Usage
 
@@ -47,7 +47,9 @@ Add this to your `devcontainer.json`.
     // optional, if you want to be able ssh
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
-    }
+    },
+    // optional, add tailscale as alternative to zerotier
+    "ghcr.io/tailscale/codespace/tailscale": {}
   },
   "customizations": {
     "vscode": {
@@ -61,10 +63,3 @@ Add this to your `devcontainer.json`.
   "capAdd": ["NET_ADMIN", "NET_RAW"]
 }
 ```
-
-### ZeroTier Usage
-
-See [ZeroTier documentation](https://docs.zerotier.com/getting-started/getting-started#setup-the-zerotier-app) for more.
-
-SystemD may not be enabled in some container. If that the case, use `service`
-tool instead of `systemctl`.
