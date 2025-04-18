@@ -1,3 +1,8 @@
+> [!WARNING]
+> I upgraded my potato laptop to SSD and now I able to run the Flutter SDK
+> directly. As a result this, repository is no longer maintained and its
+> Docker images will be removed. Please refer to others.
+
 # Codespace Flutter Docker Image
 
 [![docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](
